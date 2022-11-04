@@ -3,7 +3,8 @@ package com.example.codingpractice
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import com.example.codingpractice.fragments.LiveDataFragment
+import com.example.codingpractice.fragments.DependencyInjectionFragment
+import com.example.codingpractice.fragments.ObservableFieldFragment
 
 /**
  * 1. This is an Activity which contains different Fragments.
@@ -15,12 +16,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        addFragment(LiveDataFragment())
+        addFragment(ObservableFieldFragment())
         /**
         addFragment(ChannelFragment())
-        addFragment(DependencyInjectionFragment())
+        addFragment(LiveDataFragment())
         addFragment(FlowsFragment())
-        addFragment(ObservableFieldFragment())
         addFragment(SealedClassFragment())
          */
     }

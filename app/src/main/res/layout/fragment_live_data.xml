@@ -6,7 +6,7 @@
 
         <variable
             name="viewModels"
-            type="com.example.codingpractice.viewModels.LiveDataViewModel" />
+            type="com.example.codingpractice.viewModels.ViewModelClass" />
     </data>
 
     <FrameLayout
