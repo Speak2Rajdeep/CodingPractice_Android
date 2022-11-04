@@ -5,20 +5,31 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.ViewModelProvider
 import com.example.codingpractice.R
+import com.example.codingpractice.databinding.FragmentObservableFieldBinding
+import com.example.codingpractice.viewModels.ViewModelClass
+
 
 class ObservableFieldFragment : Fragment() {
+    private lateinit var binding: FragmentObservableFieldBinding
+    private lateinit var viewModelClass: ViewModelClass
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_observable_field, container, false)
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_observable_field, container, false)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        viewModelClass = ViewModelProvider(this@ObservableFieldFragment)[ViewModelClass::class.java]
 
+        binding.observerName = viewModelClass
+        binding.lifecycleOwner = this@ObservableFieldFragment
+        viewModelClass.getName()
     }
 }
