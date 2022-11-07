@@ -18,7 +18,7 @@
             android:id="@+id/edittext"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@={viewModels.liveDataObject}"
+
             android:layout_gravity="center"
             android:layout_marginBottom="60dp"/>
 
@@ -28,7 +28,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:gravity="center"
-            android:text="@={viewModels.liveDataObject}"
+
             android:textColor="@color/black"
             android:textSize="25sp" />
 
@@ -39,7 +39,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="40sp"
             android:gravity="center"
-            android:onClick="@{()-> viewModels.updateTextViaLiveData()}"
+            android:onClick="@{}"
             android:text="@string/update_btn" />
 
     </FrameLayout>

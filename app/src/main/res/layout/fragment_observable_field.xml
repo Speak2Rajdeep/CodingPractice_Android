@@ -3,10 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-        <variable
-            name="observerName"
-            type="com.example.codingpractice.viewModels.ViewModelClass" />
 
+        <variable
+            name="fragmentVariable"
+            type="com.example.codingpractice.fragments.ObservableFieldFragment" />
     </data>
 
     <FrameLayout
@@ -16,9 +16,20 @@
 
         <!-- TODO: Update blank fragment layout -->
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="@{()-> observerName.getName()}" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@{String.valueOf(fragmentVariable.observableField)}"
+            android:textColor="@color/black"
+            android:textSize="26sp" />
 
+        <Button
+            android:id="@+id/btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp"
+            android:onClick="@{() -> fragmentVariable.changeText()}"
+            android:text="@string/button_str" />
     </FrameLayout>
 </layout>
