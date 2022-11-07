@@ -10,7 +10,7 @@ import androidx.lifecycle.MutableLiveData
 
 class ViewModelClass(application: Application) : AndroidViewModel(application) {
 
-    private var liveDataObject = MutableLiveData("This is a Text!!!")
+    var liveDataObject = MutableLiveData("This is a Text!!!")
     fun updateTextViaLiveData() {
         liveDataObject.value = "This is Updated Text!!!"
     }
