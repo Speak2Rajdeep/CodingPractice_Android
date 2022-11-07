@@ -30,6 +30,5 @@ class LiveDataFragment : Fragment() {
 
         binding.viewModels = viewModelClass
         binding.lifecycleOwner = this@LiveDataFragment
-
     }
 }

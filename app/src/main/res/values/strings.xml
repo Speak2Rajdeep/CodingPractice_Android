@@ -4,4 +4,8 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="update_btn">Update</string>
     <string name="button_str">Button</string>
+    <string name="username_str">Username</string>
+    <string name="password_str">Password</string>
+    <string name="age_str">Age</string>
+    <string name="submit_str">Submit</string>
 </resources>

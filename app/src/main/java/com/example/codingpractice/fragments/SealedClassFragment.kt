@@ -8,6 +8,11 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.codingpractice.R
 
+/**
+ * 1. This Fragment is used for Sealed Class.
+ * 2. We have a Sealed Class with DataClasses, Classes inside.
+ */
+
 class SealedClassFragment : Fragment() {
 
     sealed class SealedClassExample {
@@ -27,7 +32,7 @@ class SealedClassFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_sealed_class, container, false)
     }

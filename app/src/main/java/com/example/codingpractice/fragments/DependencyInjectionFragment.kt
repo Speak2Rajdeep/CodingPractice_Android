@@ -10,6 +10,12 @@ import com.example.codingpractice.repository.DemoRepository
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
+/**
+ * 1. This Fragment is used to implement Dependency Injection.
+ * 2. @AndroidEntryPoint annotation is used for Fragment and Activity.
+ * 3. A simple Repository is used for a Log.
+ */
+
 @AndroidEntryPoint
 class DependencyInjectionFragment : Fragment() {
 
@@ -19,7 +25,7 @@ class DependencyInjectionFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         return inflater.inflate(R.layout.fragment_dependency_injection, container, false)
     }
 

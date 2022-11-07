@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.codingpractice.fragments.DependencyInjectionFragment
 import com.example.codingpractice.fragments.ObservableFieldFragment
+import com.example.codingpractice.fragments.UnitTestingFragment
 import dagger.hilt.android.AndroidEntryPoint
 
 /**
@@ -18,8 +19,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        addFragment(ObservableFieldFragment())
+        addFragment(UnitTestingFragment())
         /**
+        addFragment(ObservableFieldFragment())
         addFragment(DependencyInjectionFragment())
         addFragment(ChannelFragment())
         addFragment(LiveDataFragment())

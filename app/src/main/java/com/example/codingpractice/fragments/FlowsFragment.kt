@@ -14,12 +14,18 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.launch
 
-class FlowsFragment : Fragment() {
+/**
+ * 1. This Fragment is used for Flow Data Pass.
+ * 2. We have a Producer and a Consumer Here.
+ * 3. Producer emits the data through Flow Stream.
+ * 4. Consumer collects the data from the Stream.
+ */
 
+class FlowsFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_flows, container, false)
     }

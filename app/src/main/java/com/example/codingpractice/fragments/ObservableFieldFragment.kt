@@ -15,13 +15,13 @@ import com.example.codingpractice.databinding.FragmentObservableFieldBinding
  * 1. Create a ObservableField with Initial Value
  * 2. Observe the Field and update the UI Accordingly.
  */
+
 class ObservableFieldFragment : Fragment() {
     private lateinit var binding: FragmentObservableFieldBinding
     val observableField = ObservableField<Int>(0)
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View {
         binding =
             DataBindingUtil.inflate(inflater, R.layout.fragment_observable_field, container, false)
@@ -36,6 +36,10 @@ class ObservableFieldFragment : Fragment() {
 
     fun changeText() {
         observableField.set(observableField.get()!!.plus(1))
-        Toast.makeText(this@ObservableFieldFragment.context, "Age increased to ${observableField.get()} using ObservableField!", Toast.LENGTH_SHORT).show();
+        Toast.makeText(
+            this@ObservableFieldFragment.context,
+            "Age increased to ${observableField.get()} using ObservableField!",
+            Toast.LENGTH_SHORT
+        ).show();
     }
 }
