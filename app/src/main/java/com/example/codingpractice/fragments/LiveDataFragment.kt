@@ -11,6 +11,11 @@ import com.example.codingpractice.R
 import com.example.codingpractice.databinding.FragmentLiveDataBinding
 import com.example.codingpractice.viewModels.ViewModelClass
 
+/**
+ * 1. This Fragment is used for LiveData.
+ * 2. ViewModel class is Linked here.
+ */
+
 class LiveDataFragment : Fragment() {
     private lateinit var viewModelClass: ViewModelClass
     private lateinit var binding: FragmentLiveDataBinding
@@ -18,7 +23,6 @@ class LiveDataFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        // Inflate the layout for this fragment
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_live_data, container, false)
         return binding.root
     }
@@ -28,6 +32,7 @@ class LiveDataFragment : Fragment() {
         //Connecting to ViewModel Class
         viewModelClass = ViewModelProvider(this@LiveDataFragment)[ViewModelClass::class.java]
 
+        //binding.viewmodels refers the Variable of DataBinding in XML file that is connected to ViewModel Class
         binding.viewModels = viewModelClass
         binding.lifecycleOwner = this@LiveDataFragment
     }

@@ -19,8 +19,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="@={viewModels.liveDataObject}"
-            android:layout_marginBottom="60dp"/>
+            android:layout_marginBottom="60dp"
+            android:text="@={viewModels.liveDataObject}" />
 
         <TextView
             android:id="@+id/update_tv"
