@@ -3,6 +3,7 @@ package com.example.codingpractice
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import com.example.codingpractice.fragments.ChannelFragment
 import dagger.hilt.android.AndroidEntryPoint
 
 /**
@@ -16,12 +17,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        addFragment(ChannelFragment())
         /**
         addFragment(UnitTestingFragment())
         addFragment(LiveDataFragment())
         addFragment(ObservableFieldFragment())
         addFragment(DependencyInjectionFragment())
-        addFragment(ChannelFragment())
         addFragment(FlowsFragment())
         addFragment(SealedClassFragment())
          */
